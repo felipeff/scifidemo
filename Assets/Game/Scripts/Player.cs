@@ -47,7 +47,6 @@ public class Player : MonoBehaviour {
 		
 		Cursor.lockState = CursorLockMode.Locked;
 
-		currentAmmo = maxAmmo;
 	}
 	
 	// Update is called once per frame
@@ -159,5 +158,7 @@ public class Player : MonoBehaviour {
     {
 		_weapon.SetActive(true);
 		_uiManager.EnableWeapon();
+		currentAmmo = maxAmmo;
+		_uiManager.UpdateAmmo(currentAmmo);
     }
 }
